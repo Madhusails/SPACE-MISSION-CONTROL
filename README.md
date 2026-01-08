@@ -29,3 +29,7 @@ ng add @angular-architects/module-federation@17 --project space-shell-app --port
 ng add @angular-architects/module-federation@17 --project astronaut-mfe --port 4300
 ng add @angular-architects/module-federation@17 --project space-ship-mfe --port 4400
 ng add @angular-architects/module-federation@17 --project space-station-mfe --port 4500
+
+To create a module
+ng g m spaceship --routing
+ng g c spaceship

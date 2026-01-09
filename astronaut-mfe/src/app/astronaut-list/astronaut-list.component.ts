@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { AstronautDetails } from '../domain/astronaut-details';
 import { MatTableModule } from '@angular/material/table';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-astronaut-list',
   standalone: true,
   imports: [
-    MatTableModule
+    MatTableModule,
+    RouterModule
   ],
   templateUrl: './astronaut-list.component.html',
   styleUrl: './astronaut-list.component.scss'

@@ -4,8 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AstronautListComponent } from './astronaut-list/astronaut-list.component';
-import { AddAstronautComponent } from './add-astronaut/add-astronaut.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,6 @@ import { AddAstronautComponent } from './add-astronaut/add-astronaut.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AstronautListComponent,
-    AddAstronautComponent,
     AppRoutingModule
   ],
   providers: [],

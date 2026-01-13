@@ -1,7 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app/app.component';
-import { config } from './app/app.config.server';
 
-const bootstrap = () => bootstrapApplication(AppComponent, config);
+const bootstrap = () => bootstrapApplication(AppComponent, {
+	providers: [importProvidersFrom(NoopAnimationsModule)]
+});
 
 export default bootstrap;

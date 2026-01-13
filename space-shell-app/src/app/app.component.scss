@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.app-body {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+app-side-nav {
+  width: 220px;
+  flex: 0 0 220px;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.main-content {
+  flex: 1 1 auto;
+  padding: 20px;
+  overflow: auto;
+}
+
+/* ensure router-outlet content fills area */
+.main-content > * {
+  height: 100%;
+}

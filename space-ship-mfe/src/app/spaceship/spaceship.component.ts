@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './spaceship.component.html',
-  styleUrl: './spaceship.component.scss'
+  styleUrls: ['./spaceship.component.scss']
 })
 export class SpaceshipComponent {
 

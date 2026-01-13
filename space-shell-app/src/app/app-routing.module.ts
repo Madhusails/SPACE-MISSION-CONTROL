@@ -26,6 +26,18 @@ const routes: Routes = [
                 console.error('Error loading Astronaut module', err);
             });
         }
+    },
+    {
+        path: "spacestation",
+        loadChildren: () => {
+            return loadRemoteModule({
+                remoteEntry: 'http://localhost:4500/remoteEntry.js',
+                remoteName: 'spaceStationMfe',
+                exposedModule: './SpaceStationModule'
+            }).then(m => m.SpaceStationModule).catch(err => {
+                console.error('Error loading Space Station module', err);
+            });
+        }
     }
 
 ];

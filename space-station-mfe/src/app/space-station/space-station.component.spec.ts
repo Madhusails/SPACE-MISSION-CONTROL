@@ -1,18 +1,18 @@
 // import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { AddAstronautComponent } from './add-astronaut.component';
+// import { SpaceStationComponent } from './space-station.component';
 
-// describe('AddAstronautComponent', () => {
-//   let component: AddAstronautComponent;
-//   let fixture: ComponentFixture<AddAstronautComponent>;
+// describe('SpaceStationComponent', () => {
+//   let component: SpaceStationComponent;
+//   let fixture: ComponentFixture<SpaceStationComponent>;
 
 //   beforeEach(async () => {
 //     await TestBed.configureTestingModule({
-//       imports: [AddAstronautComponent]
+//       imports: [SpaceStationComponent]
 //     })
 //     .compileComponents();
     
-//     fixture = TestBed.createComponent(AddAstronautComponent);
+//     fixture = TestBed.createComponent(SpaceStationComponent);
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });

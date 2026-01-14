@@ -1,1 +1,13 @@
-<p>space-station works!</p>
+<div class="gallery-container">
+  <div *ngFor="let img of images" class="card">
+    <img [src]="img.url" [alt]="img.title">
+    <p>{{ img.title }}</p>
+  </div>
+</div>
+
+<!-- <mat-grid-list class="gallery-container" cols="5" >
+  <mat-grid-tile *ngFor="let img of images" class="card">
+    <img [src]="img.url" [alt]="img.title">
+    <mat-grid-tile-footer>{{img.title}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list> -->

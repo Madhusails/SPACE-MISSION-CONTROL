@@ -1,25 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AstronautDetails } from '../domain/astronaut-details';
 import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
+import { AstronautService } from '../service/astronaut.service';
 
 @Component({
   selector: 'app-astronaut-list',
-  standalone: true,
-  imports: [
-    MatTableModule,
-    RouterModule
-  ],
   templateUrl: './astronaut-list.component.html',
   styleUrl: './astronaut-list.component.scss'
 })
-export class AstronautListComponent {
+export class AstronautListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'age', 'missions', 'active'];
-  dataSource: AstronautDetails[] = [
-    { id: 1, name: 'Alice Johnson', age: 34, missions: ['Apollo 11', 'Gemini 4'], active: true },
-    { id: 2, name: 'Bob Smith', age: 40, missions: ['Skylab 2'], active: false },
-    { id: 3, name: 'Charlie Brown', age: 29, missions: ['STS-1', 'STS-7'], active: true },
-    { id: 4, name: 'Diana Prince', age: 38, missions: ['Mir EO-15'], active: false },
-    { id: 5, name: 'Ethan Hunt', age: 45, missions: ['ISS Expedition 20'], active: true }
-  ];
+  // dataSource: AstronautDetails[] = [
+  //   { id: 1, name: 'Alice Johnson', age: 34, missions: ['Apollo 11', 'Gemini 4'], active: true },
+  //   { id: 2, name: 'Bob Smith', age: 40, missions: ['Skylab 2'], active: false },
+  //   { id: 3, name: 'Charlie Brown', age: 29, missions: ['STS-1', 'STS-7'], active: true },
+  //   { id: 4, name: 'Diana Prince', age: 38, missions: ['Mir EO-15'], active: false },
+  //   { id: 5, name: 'Ethan Hunt', age: 45, missions: ['ISS Expedition 20'], active: true }
+  // ];
+  dataSource: AstronautDetails[] = [];
+
+  constructor(private astronautService: AstronautService) {}
+
+  ngOnInit() {
+    this.dataSource = this.astronautService.getAstronauts();
+  }
 }

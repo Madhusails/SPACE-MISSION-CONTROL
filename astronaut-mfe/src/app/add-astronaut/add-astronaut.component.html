@@ -1,44 +1,25 @@
 <div class="container">
-    <h3 class="heading">Add Astronaut</h3>
-    <form class="astronaut-form">
+    <h3>Add Astronaut</h3>
+    <form [formGroup]="astronautForm" (ngSubmit)="onSubmit()" class="astronaut-form">
         <mat-form-field>
-            <input
-                matInput
-                placeholder="Enter Id"
-                [formControl]="id"
-                required
-            />
-            <mat-error *ngIf="id.invalid">{{ errorMessage() }}</mat-error>
+            <mat-label>Enter your Id</mat-label>
+            <input matInput formControlName="id">
         </mat-form-field>
         <mat-form-field>
-            <input
-                matInput
-                placeholder="Enter name"
-                [formControl]="name"
-                required
-            />
-            <mat-error *ngIf="name.invalid">{{ errorMessage() }}</mat-error>
+            <mat-label>Enter your Name</mat-label>
+            <input matInput formControlName="name">
         </mat-form-field>
         <mat-form-field>
-            <input
-                matInput
-                placeholder="Enter age"
-                [formControl]="age"
-                required
-            />
-            <mat-error *ngIf="age.invalid">{{ errorMessage() }}</mat-error>
+            <mat-label>Enter your Age</mat-label>
+            <input matInput formControlName="age">
         </mat-form-field>
         <mat-form-field>
-            <input
-                matInput
-                placeholder="Enter missions"
-                [formControl]="missions"
-                required
-            />
-            <mat-error *ngIf="missions.invalid">{{ errorMessage() }}</mat-error>
+            <mat-label>Enter your Missions</mat-label>
+            <input matInput formControlName="missions">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput>
-        </mat-form-field>
+        <div class="btn-class">
+            <button class="cancel-button" type="button" matButton="filled">Cancel</button>
+            <button class="submit-button" type="submit" matButton="filled">Submit</button>
+        </div>
     </form>
 </div>
